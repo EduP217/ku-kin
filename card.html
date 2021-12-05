@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Card</title>
+    <style>
+        img {
+            max-width: 100%;
+        }
+
+        .card {
+            width: 320px;
+            box-shadow: 1px 1px 4px 1px #888;
+            border-radius: 3px;
+            background-color: white;
+            font-family: sans-serif;
+        }
+
+        .card button {
+            background-color: white;
+            color: #888;
+            border: 1px solid black;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .card span {
+            color: #888;
+        }
+
+        .viewButton {
+            border-radius: 3px 0 0 3px;
+            border-right: none !important;
+        }
+
+        .viewButton:hover, .viewButton:active {
+            background-color: #ccc;
+            color: black;
+        }
+
+        .editButton {
+            border-radius: 0 3px 3px 0;
+        }
+
+        .editButton:hover, .editButton:active {
+            background-color: #ccc;
+            color: black;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            padding-top: 0;
+        }
+
+        .button-group {
+            display: flex;
+        }
+
+        main {
+            padding: 0.25rem 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="card">
+        <header>
+            <img src="https://picsum.photos/320/240" alt="card-image">
+        </header>
+        <main>
+            <p>
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            </p>
+        </main>
+        <footer class="footer">
+            <div class="button-group">
+                <button type="button" class="viewButton">View</button>
+                <button type="button" class="editButton">Edit</button>
+            </div>
+            <span>9 mins</span>
+        </footer>
+    </article>
+</body>
+
+</html>
