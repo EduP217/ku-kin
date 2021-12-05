@@ -1,0 +1,288 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fjalla+One&family=Rambla&display=swap');
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #f2f2ea;
+  --secondary-color: #f0979b;
+  --accent1-color: #d14754;
+  --accent2-color: #b8a3b4;
+  --accent3-color: #ded4d3;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: 'Fjalla One', Helvetica, sans-serif;
+  --paragraph-font: 'Rambla', Helvetica, sans-serif;
+  --link-font: 'Bubblegum Sans', cursive, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: black;  /* headlines on a white background */ 
+  --headline-color-on-color: white; /* headlines on a colored background */ 
+  --paragraph-color-on-white: black; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+  --paragraph-background-color: black;
+  --nav-link-color: black;
+  --nav-background-color: var(--accent3-color);
+  --nav-hover-link-color: black;
+  --nav-hover-background-color: var(--accent2-color);
+}
+
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+html {
+  background-color: var(--primary-color);
+}
+body {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+header {
+  color: var(--paragraph-color-on-color);
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color);
+  padding: 1em;
+  font-size: 1.25rem;
+}
+
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding-top: 5px;
+}
+nav a {
+  padding:1em;
+  min-width: 70px;
+}
+nav a:link, nav a:visited, nav label {
+  color: var(--nav-link-color);
+  font-family: var(--link-font);
+}
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+.chevron {
+  font-size: 6em;
+  color: var(--accent1-color);
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.chevron-left::before{
+  content:"\2039";
+}
+
+.chevron-after::after{
+  content:"\203A";
+}
+
+main {
+  background-color: white;
+}
+
+.header {
+  display: flex;
+}
+
+.content {
+  padding: 1rem 5.5rem;
+  padding-bottom: 2rem;
+}
+
+p.introduction {
+  padding: 0;
+}
+
+h2 {
+  font-size: 2em;
+  padding: 0.5em 0;
+  margin: 1em 0;
+  border-bottom: 2px dashed var(--accent3-color);
+}
+
+h3 {
+  font-size: 1.5em;
+  padding: 0;
+  margin: 0.5em 0;
+}
+
+.logo-box {
+
+}
+
+.logo-img {
+  height: 65px;
+}
+
+.navigation {
+  flex-grow: 1;
+}
+
+.input-search {
+  flex-grow: 0.85;
+  text-align: right;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suscribe {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: white;
+  border: 1px solid var(--accent2-color);
+}
+
+.suscribe:hover, .suscribe:focus {
+  background-color: var(--accent3-color);
+  border-color: var(--accent3-color);
+}
+
+.social > img {
+  width: 50px;
+  height: 50px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 30em 0.5rem 7rem auto;
+    grid-template-rows: 0.5rem repeat(7, 2.5rem) 0.5rem;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+    margin: 2rem 0;
+}
+  
+.grid-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+  
+.grid-container p {
+    padding: 0;
+    margin: 0;
+}
+
+.grid-container input, .grid-container select {
+    font-family: var(--paragraph-font);
+}
+  
+.grid-container button {
+    padding: 0.35rem;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--accent1-color);
+    color: var(--paragraph-color-on-color);
+    border-color: var(--accent1-color);
+    font-size: 1.1em;
+    cursor: pointer;
+}
+  
+.grid-container button:hover,
+.grid-container button:focus {
+    background-color: var(--accent2-color);
+    border-color: var(--accent2-color);
+}
+
+.image-contact {
+    grid-column: 1;
+    grid-row: 1/10;
+}
+
+.label-contact-1 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.input-contact-1 {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.label-contact-2 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.input-contact-2 {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.label-contact-3 {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.select-contact-3 {
+    grid-column: 4;
+    grid-row: 4;
+}
+
+.label-contact-4 {
+    grid-column: 3;
+    grid-row: 5;
+}
+
+.input-contact-4 {
+    grid-column: 4;
+    grid-row: 5;
+}
+
+.label-contact-5 {
+    grid-column: 3;
+    grid-row: 6;
+}
+
+.input-contact-5 {
+    grid-column: 4;
+    grid-row: 6;
+}
+
+.label-contact-6 {
+    grid-column: 3;
+    grid-row: 7;
+}
+
+.select-contact-6 {
+    grid-column: 4;
+    grid-row: 7;
+}
+
+.btn-contact-7 {
+    grid-column: 4;
+    grid-row: 8;
+}
